@@ -5,3 +5,9 @@
 .floatingRight{
     float:right;
 }
+
+#login {
+position: absolute;
+right: 0em;
+top: 11%;
+}

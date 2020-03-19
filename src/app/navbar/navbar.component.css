@@ -1,0 +1,18 @@
+#general{
+    float: left;
+    width: 100%;
+}
+a {
+    color: white !important;
+}
+
+.dropdown-menu,
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.open>a {
+    background-color: rgb(228, 22, 128);
+}
+
+.dropdown-menu>li>a:focus,
+.dropdown-menu>li>a:hover {
+    background-color: rgb(236, 141, 190);
+}
