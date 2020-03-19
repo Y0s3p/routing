@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-lateral',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lateral.component.css']
 })
 export class LateralComponent implements OnInit {
+
+  public isCollapsed = false;
 
   constructor() { }
 
