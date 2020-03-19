@@ -7,8 +7,6 @@ import { Component, OnInit, NgModule } from '@angular/core';
 })
 export class LateralComponent implements OnInit {
 
-  public isCollapsed = false;
-
   constructor() { }
 
   ngOnInit(): void {
