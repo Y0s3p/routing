@@ -1,0 +1,51 @@
+<div style="margin-left: 1%;">
+    <h1>
+        Angular Routing
+        <small class="text-muted">para Dummies</small>
+    </h1>
+</div>
+
+<div style="width: 50%; margin-left: 1%;">
+    <p class="text-sm-left" class="float-left" class="text-justify">
+        El routing de angular nos permitirá habilitar un sistema de navegación en nuestra App.
+        Por ejemplo, si nuestra App tiene un módulo de login donde debemos introducir user y password tendremos
+        probablemente un <kbd>myapp/login</kbd> y un <kbd>myapp/dashboard</kbd> para cuando hayamos logeado
+        satisfactoriamente.
+        En resumen, el Router permite que podamos mostrar ciertos componentes dependiendo de la url en la que estamos.
+        También podremos enviar informacion a través de la url y podremos evitar que un usuario,no autenticado acceda
+        directamente al <kbd>myapp/dashboard</kbd> (en este ejemplo).
+        Para poder utilizar el routing, en el momento que creamos el proyecto angular le debemos decir que si queremos
+        usar
+        el routing para que nos genere el archivo <kbd>app-routing.module.ts</kbd>.
+    </p>
+    <pre><code>
+        import &lt; NgModule &gt; from '@angular/core';
+        import &lt; Routes, RouterModule &gt; from '@angular/router';
+        
+        const routes: Routes = [];
+        
+        @NgModule(&lt;
+          imports: [RouterModule.forRoot(routes)],
+          exports: [RouterModule]
+          &gt;)
+        export class AppRoutingModule &lt; &gt;
+        </code></pre>
+        <p>
+    Crearíamos los componentes adicionales para movernos entre ellos: <br>
+    Creamos el dashboard con: <code>$ng g c dashboard</code> <br>
+    Y despues creamos la view1 con: <code>$ng g c view1</code> <br>
+    El siguiente paso será modificar el archivo <strong>app-routing.module.ts</strong></p>
+
+    <pre><code>const routes: Routes = [
+        &lt; path: 'dashboard', component: DashboardComponent &gt;,
+        &lt; path: 'view/:id', component: View1Component &gt;, ];</code></pre>
+    <p>
+    De esta forma cuando la url tenga /dashboard/ cargue el componente <strong>DashboardComponent</strong> y cuando la url tenga /view/2 va a cargar el componente <strong>View1Component</strong> y va a enviar un parametro
+    id.</p>
+</div>
+
+
+<blockquote class="blockquote text-right">
+    <p class="mb-0">Gracias a esta página entendí por fin el routing y por ende recuperé mis ganas de vivir.</p>
+    <footer class="blockquote-footer">Oscar <cite title="Source Title">2020</cite></footer>
+</blockquote>
