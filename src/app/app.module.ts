@@ -3,11 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { LateralComponent } from './lateral/lateral.component';
+import { FooterComponent } from './footer/footer.component';
+import { CoursesComponent } from './courses/courses.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LateralComponent
+    LateralComponent,
+    FooterComponent,
+    CoursesComponent
   ],
   imports: [
     BrowserModule
